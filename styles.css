@@ -1,0 +1,54 @@
+header{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.main{
+    margin-top: 50px;
+    display: flex;
+   justify-content: center;
+}
+
+.main_div{
+    float: left;
+    margin: 10px; 
+    border: 1px solid green;
+    height: 200px;
+    width: 200px; 
+}
+
+.main_parag{
+    overflow-x: hidden;
+    position: relative;
+    top: 30px;
+    left: 25px;
+    height: 150px;
+    width: 150px;
+}
+
+.delete_btn{
+    height:30px;
+    width: 30px;
+    border-radius: 50px;
+    position: relative;
+    left: 168px;
+    bottom: 150px;
+}
+
+#tasks_div{
+    margin-top: 50px;
+}
+
+#text_inp{
+    margin: 10px;
+}
+
+#date_inp{
+    margin: 10px;
+
+}
+
+.submit_btn{
+    margin: 10px;
+
+}
