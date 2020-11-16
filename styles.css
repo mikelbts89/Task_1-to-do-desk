@@ -1,54 +1,45 @@
-header{
-    margin-top: 50px;
-    text-align: center;
+body{
+    background-color: lightgrey;
 }
 
-.main{
-    margin-top: 50px;
-    display: flex;
-   justify-content: center;
-}
-
-.main_div{
+.card_div{
+    height: 300px;
+    width: 200px;
+    border: 1px solid black;
     float: left;
-    margin: 10px; 
-    border: 1px solid green;
-    height: 200px;
-    width: 200px; 
+    margin: 10px;
+    background-color: black;
+    color: white;
+    border-radius:15px;
+    box-shadow: white 10px 10px 10px 10px ;
 }
 
-.main_parag{
-    overflow-x: hidden;
-    position: relative;
-    top: 30px;
-    left: 25px;
-    height: 150px;
+.text_div{
+    overflow-y: scroll;
+    height: 220px;
     width: 150px;
-}
-
-.delete_btn{
-    height:30px;
-    width: 30px;
-    border-radius: 50px;
     position: relative;
-    left: 128px;
-    bottom: 150px;
-}
-
-#tasks_div{
-    margin-top: 50px;
-}
-
-#text_inp{
-    margin: 10px;
-}
-
-#date_inp{
-    margin: 10px;
+    left: 25px;
+    top: 40px;
 
 }
 
-.submit_btn{
-    margin: 10px;
-
+.date_div{
+    position: relative;
+    top: 40px;
+    left: 5px;
 }
+
+.del_btn{
+    position: relative;
+   bottom: 240px;
+   left: 163px;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    
+}
+
+::-webkit-scrollbar {
+    width:0;
+    }
