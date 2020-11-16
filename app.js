@@ -31,11 +31,8 @@ function getData() {
   let date = dateContent.value;
   textContentArr.push(text);
   dateContentArr.push(date);
-  console.log(textContentArr, dateContentArr);
   localStorage.setItem("textContent", JSON.stringify(textContentArr));
   localStorage.setItem("dateContent", JSON.stringify(dateContentArr));
-  console.log(localStorage.getItem("textContent"));
-  console.log(localStorage.getItem("dateContent"));
   draw();
   textContent.value = "";
   dateContent.value = "";
