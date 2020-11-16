@@ -78,7 +78,7 @@ function drawAfterRefresh() {
 function delElement(div) {
   div.addEventListener("mouseenter", () => {
     let delBtn = document.createElement("button");
-    delBtn.innerText = "X";
+    delBtn.innerText = "✗";
     delBtn.className = "del_btn";
     delBtn.addEventListener("click", (e) => {
       e.target.parentElement.remove();

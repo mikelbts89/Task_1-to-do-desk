@@ -1,5 +1,21 @@
 body{
-    background-color: lightgrey;
+    background-color: black;
+}
+
+.input_div{
+text-align: center;
+}
+
+header{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: fantasy;
+    color: white;
+    text-align: center;
+}
+
+#main_content_div{
+    padding: 70px ;
 }
 
 .card_div{
@@ -7,11 +23,11 @@ body{
     width: 200px;
     border: 1px solid black;
     float: left;
-    margin: 10px;
+    margin: 20px;
     background-color: black;
     color: white;
     border-radius:15px;
-    box-shadow: white 10px 10px 10px 10px ;
+    box-shadow: white 5px 5px 5px 5px ;
 }
 
 .text_div{
@@ -20,7 +36,7 @@ body{
     width: 150px;
     position: relative;
     left: 25px;
-    top: 40px;
+    top: 30px;
 
 }
 
@@ -31,6 +47,10 @@ body{
 }
 
 .del_btn{
+    font-size: 20px;
+    color: white;
+    border: none;
+    background-color: black;
     position: relative;
    bottom: 240px;
    left: 163px;
