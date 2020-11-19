@@ -30,3 +30,8 @@ header{
     box-shadow: white 5px 5px 5px 5px ;
 }
 
+.del_btn{
+    color: white;
+    border: none;
+    background-color: black;
+}

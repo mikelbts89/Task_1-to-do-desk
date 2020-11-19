@@ -25,7 +25,6 @@ let getTaskData = () => {
     id: new Date(),
   };
   taskDataArr.push(taskData);
-  console.log(taskDataArr);
   localStorage.setItem("taskData", JSON.stringify(taskDataArr));
   draw(taskDataArr);
 };
@@ -37,6 +36,24 @@ let draw = () => {
     cardDiv.className = "card_div";
     cardDiv.innerText = taskDataArr[i].task;
     mainContentDiv.appendChild(cardDiv);
-    console.log(taskDataArr[i]);
+    delTask(cardDiv, taskDataArr[i].id);
   }
+  textContent.value = "";
+};
+
+let delTask = (cDiv, buttonId) => {
+  let delBtn = document.createElement("button");
+  delBtn.className = "del_btn";
+  delBtn.innerText = "X";
+  delBtn.name = buttonId;
+  cDiv.appendChild(delBtn);
+  delBtn.addEventListener("click", (e) => {
+    e.target.parentElement.remove();
+    for (let i = 0; i < taskDataArr.length; i++) {
+      if (taskDataArr[i].id == delBtn.name) {
+        taskDataArr.splice(i, 1);
+        localStorage.setItem("taskData", JSON.stringify(taskDataArr));
+      }
+    }
+  });
 };
