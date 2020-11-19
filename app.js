@@ -42,7 +42,7 @@ let draw = () => {
     cardDiv.appendChild(dateDiv);
     mainContentDiv.appendChild(cardDiv);
     delTask(cardDiv, taskDataArr[i].id);
-    finishedTask(cardDiv);
+    finishedTask(cardDiv, taskDataArr[i].task, textDiv);
   }
   textContent.value = "";
 };
@@ -64,12 +64,12 @@ let delTask = (cDiv, buttonId) => {
   });
 };
 
-let finishedTask = (cDiv) => {
+let finishedTask = (cDiv, text, tDiv) => {
   let finishBtn = document.createElement("button");
   finishBtn.className = "del_btn";
   finishBtn.innerText = "Finished Task";
   cDiv.appendChild(finishBtn);
-  finishBtn.onclick = (e) => {
-    e.target.parentElement.remove();
+  finishBtn.onclick = () => {
+    tDiv.innerHTML = text.strike();
   };
 };
