@@ -1,6 +1,13 @@
 body{
     background-color: lightskyblue;
 }
+input{
+    background-color: lightskyblue;
+    border: solid 0.5px white;
+    border-radius: 5px;
+    height: 35px;
+    color: white;
+}
 
 .input_div{
 text-align: center;

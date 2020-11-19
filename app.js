@@ -48,12 +48,12 @@ let delTask = (cDiv, buttonId) => {
   delBtn.innerText = "Delet Task";
   delBtn.name = buttonId;
   cDiv.appendChild(delBtn);
-  delBtn.addEventListener("click", () => {
+  delBtn.addEventListener("click", (e) => {
+    e.target.parentElement.remove();
     for (let i = 0; i < taskDataArr.length; i++) {
       if (taskDataArr[i].id == delBtn.name) {
         taskDataArr.splice(i, 1);
         localStorage.setItem("taskData", JSON.stringify(taskDataArr));
-        draw();
       }
     }
   });
