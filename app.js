@@ -7,7 +7,7 @@ window.onload = () => {
   if (localStorage.getItem("taskData") != null) {
     taskDataArr = JSON.parse(localStorage.getItem("taskData"));
   }
-  draw(taskDataArr);
+  draw();
 };
 
 function refreshPage() {
@@ -26,7 +26,7 @@ let getTaskData = () => {
   };
   taskDataArr.push(taskData);
   localStorage.setItem("taskData", JSON.stringify(taskDataArr));
-  draw(taskDataArr);
+  draw();
 };
 
 let draw = () => {
@@ -37,6 +37,7 @@ let draw = () => {
     cardDiv.innerText = taskDataArr[i].task;
     mainContentDiv.appendChild(cardDiv);
     delTask(cardDiv, taskDataArr[i].id);
+    finishedTask(cardDiv);
   }
   textContent.value = "";
 };
@@ -44,16 +45,26 @@ let draw = () => {
 let delTask = (cDiv, buttonId) => {
   let delBtn = document.createElement("button");
   delBtn.className = "del_btn";
-  delBtn.innerText = "X";
+  delBtn.innerText = "Delet Task";
   delBtn.name = buttonId;
   cDiv.appendChild(delBtn);
-  delBtn.addEventListener("click", (e) => {
-    e.target.parentElement.remove();
+  delBtn.addEventListener("click", () => {
     for (let i = 0; i < taskDataArr.length; i++) {
       if (taskDataArr[i].id == delBtn.name) {
         taskDataArr.splice(i, 1);
         localStorage.setItem("taskData", JSON.stringify(taskDataArr));
+        draw();
       }
     }
   });
+};
+
+let finishedTask = (cDiv) => {
+  let finishBtn = document.createElement("button");
+  finishBtn.className = "del_btn";
+  finishBtn.innerText = "Finished Task";
+  cDiv.appendChild(finishBtn);
+  finishBtn.onclick = (e) => {
+    e.target.parentElement.remove();
+  };
 };

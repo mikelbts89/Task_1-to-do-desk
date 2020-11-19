@@ -1,5 +1,5 @@
 body{
-    background-color: black;
+    background-color: lightskyblue;
 }
 
 .input_div{
@@ -19,12 +19,12 @@ header{
 }
 
 .card_div{
-    height: 300px;
-    width: 200px;
-    border: 1px solid black;
+    height: 150px;
+    width: 150px;
+    border: 1px solid lightseagreen;
     float: left;
     margin: 20px;
-    background-color: black;
+    background-color: lightseagreen;
     color: white;
     border-radius:15px;
     box-shadow: white 5px 5px 5px 5px ;
@@ -33,5 +33,5 @@ header{
 .del_btn{
     color: white;
     border: none;
-    background-color: black;
+    background-color: lightseagreen;
 }
