@@ -1,8 +1,8 @@
 body{
-    background-color: lightskyblue;
+    background-color: #ffda77;
 }
 input{
-    background-color: lightskyblue;
+    background-color: #ffda77;
     border: solid 0.5px white;
     border-radius: 5px;
     height: 35px;
@@ -28,17 +28,17 @@ header{
 .card_div{
     height: 150px;
     width: 150px;
-    border: 1px solid lightseagreen;
+    border: 1px solid #ffc85c;
     float: left;
     margin: 20px;
-    background-color: lightseagreen;
+    background-color: #ffc85c;
     color: white;
     border-radius:15px;
-    box-shadow: white 5px 5px 5px 5px ;
+    box-shadow: #fff8c1 5px 5px 5px 5px ;
 }
 
 .del_btn{
     color: white;
     border: none;
-    background-color: lightseagreen;
+    background-color: #ffc85c;
 }

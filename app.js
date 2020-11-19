@@ -33,8 +33,13 @@ let draw = () => {
   mainContentDiv.innerHTML = "";
   for (let i = 0; i < taskDataArr.length; i++) {
     let cardDiv = document.createElement("div");
+    let textDiv = document.createElement("div");
+    let dateDiv = document.createElement("div");
     cardDiv.className = "card_div";
-    cardDiv.innerText = taskDataArr[i].task;
+    textDiv.innerText = taskDataArr[i].task;
+    dateDiv.innerText = taskDataArr[i].date;
+    cardDiv.appendChild(textDiv);
+    cardDiv.appendChild(dateDiv);
     mainContentDiv.appendChild(cardDiv);
     delTask(cardDiv, taskDataArr[i].id);
     finishedTask(cardDiv);
