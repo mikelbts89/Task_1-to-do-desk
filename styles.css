@@ -30,36 +30,3 @@ header{
     box-shadow: white 5px 5px 5px 5px ;
 }
 
-.text_div{
-    overflow-y: scroll;
-    height: 220px;
-    width: 150px;
-    position: relative;
-    left: 25px;
-    top: 30px;
-
-}
-
-.date_div{
-    position: relative;
-    top: 40px;
-    left: 5px;
-}
-
-.del_btn{
-    font-size: 20px;
-    color: white;
-    border: none;
-    background-color: black;
-    position: relative;
-   bottom: 240px;
-   left: 163px;
-    height: 30px;
-    width: 30px;
-    border-radius: 15px;
-    
-}
-
-::-webkit-scrollbar {
-    width:0;
-    }
